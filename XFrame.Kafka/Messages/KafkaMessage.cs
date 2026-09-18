@@ -2,7 +2,12 @@ namespace XFrame.Kafka.Messages;
 
 public sealed class KafkaMessage
 {
-    public KafkaMessage(string message, IReadOnlyDictionary<string, string> headers, Topic topic, MessageKey key, MessageId messageId)
+    public KafkaMessage(
+        string message, 
+        IReadOnlyDictionary<string, string> headers, 
+        Topic topic, 
+        MessageKey key, 
+        MessageId messageId)
     {
         Message = string.IsNullOrWhiteSpace(message) ? throw new ArgumentNullException(nameof(message)) : message;
         Headers = headers ?? throw new ArgumentNullException(nameof(headers));

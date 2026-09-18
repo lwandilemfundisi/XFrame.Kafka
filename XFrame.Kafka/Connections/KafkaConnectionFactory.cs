@@ -14,6 +14,7 @@ public sealed class KafkaConnectionFactory(IKafkaConfiguration configuration) : 
             Acks = configuration.Persistent ? Acks.All : Acks.None,
             EnableIdempotence = configuration.Persistent
         }).Build();
+
         return new KafkaConnection(producer);
     }
 }

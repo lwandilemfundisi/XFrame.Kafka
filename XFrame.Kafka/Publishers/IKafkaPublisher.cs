@@ -5,5 +5,7 @@ namespace XFrame.Kafka.Publishers;
 
 public interface IKafkaPublisher
 {
-    Task<DeliveryResult<string, string>> PublishAsync(KafkaMessage message, CancellationToken cancellationToken = default);
+    Task<DeliveryResult<string, string>> PublishAsync(
+        KafkaMessage message, 
+        CancellationToken cancellationToken = default);
 }
