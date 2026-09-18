@@ -1,8 +1,11 @@
+using XFrame.ValueObjects.SingleValueObjects;
+
 namespace XFrame.Kafka;
 
-public sealed record MessageKey
+public class MessageKey : SingleValueObject<string>
 {
-    public MessageKey(string value) => Value = string.IsNullOrWhiteSpace(value) ? throw new ArgumentNullException(nameof(value)) : value;
-    public string Value { get; }
-    public override string ToString() => Value;
+    public MessageKey(string value) : base(value)
+    {
+        if (string.IsNullOrEmpty(value)) throw new ArgumentNullException(nameof(value));
+    }
 }

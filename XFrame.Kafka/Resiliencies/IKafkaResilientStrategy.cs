@@ -1,11 +1,8 @@
+using XFrame.Resilience;
+
 namespace XFrame.Kafka.Resiliencies;
 
-public interface IKafkaResilientStrategy
+public interface IKafkaResilientStrategy : IResilientStrategy
 {
-    KafkaRetryDecision CheckRetry(Exception exception, int currentRetryCount);
-}
 
-public readonly record struct KafkaRetryDecision(bool ShouldRetry, TimeSpan Delay)
-{
-    public static KafkaRetryDecision No => new(false, TimeSpan.Zero);
 }

@@ -1,8 +1,12 @@
+using XFrame.Ids;
+using XFrame.ValueObjects.SingleValueObjects;
+
 namespace XFrame.Kafka;
 
-public sealed record MessageId
+public class MessageId : SingleValueObject<string>, IIdentity
 {
-    public MessageId(string value) => Value = string.IsNullOrWhiteSpace(value) ? throw new ArgumentNullException(nameof(value)) : value;
-    public string Value { get; }
-    public override string ToString() => Value;
+    public MessageId(string value) : base(value)
+    {
+        if (string.IsNullOrEmpty(value)) throw new ArgumentNullException(nameof(value));
+    }
 }
