@@ -1,5 +1,3 @@
 <Solution>
-  <Project Path="XFrame.Kafka.Consumer/XFrame.Kafka.Consumer.csproj" Id="4320f8c8-66b0-4e85-be65-bda8cfb9c2b4" />
-  <Project Path="XFrame.Kafka.Producer/XFrame.Kafka.Producer.csproj" Id="872c1232-4ee7-4375-b7ae-a43eb479ca32" />
   <Project Path="XFrame.Kafka/XFrame.Kafka.csproj" />
 </Solution>
