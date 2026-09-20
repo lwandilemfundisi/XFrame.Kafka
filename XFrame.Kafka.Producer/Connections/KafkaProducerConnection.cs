@@ -1,6 +1,6 @@
 ﻿using Confluent.Kafka;
 
-namespace XFrame.Kafka.Connections
+namespace XFrame.Kafka.Producer.Connections
 {
     public class KafkaProducerConnection<TKey, TValue> : IKafkaProducerConnection<TKey, TValue>
     {
@@ -12,8 +12,8 @@ namespace XFrame.Kafka.Connections
         }
 
         public Task<DeliveryResult<TKey, TValue>> ProduceAsync(
-            Topic topic, 
-            Message<TKey, TValue> message, 
+            Topic topic,
+            Message<TKey, TValue> message,
             CancellationToken cancellationToken)
         {
             return _producer.ProduceAsync(topic.Value, message, cancellationToken);

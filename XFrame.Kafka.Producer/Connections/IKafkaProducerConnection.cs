@@ -1,6 +1,6 @@
 ﻿using Confluent.Kafka;
 
-namespace XFrame.Kafka.Connections
+namespace XFrame.Kafka.Producer.Connections
 {
     public interface IKafkaProducerConnection<TKey, TValue>
     {

@@ -1,7 +1,7 @@
 ﻿using Confluent.Kafka;
 using XFrame.Kafka.Messages;
 
-namespace XFrame.Kafka.Producers
+namespace XFrame.Kafka.Producer
 {
     public interface IKafkaProducer
     {

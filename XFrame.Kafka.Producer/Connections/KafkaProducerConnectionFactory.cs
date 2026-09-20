@@ -1,14 +1,13 @@
 ﻿using Confluent.Kafka;
-using System.Runtime.CompilerServices;
 using XFrame.Kafka.Configurations;
 
-namespace XFrame.Kafka.Connections
+namespace XFrame.Kafka.Producer.Connections
 {
     public class KafkaProducerConnectionFactory : IKafkaProducerConnectionFactory
     {
         private readonly IKafkaConfiguration _configuration;
 
-        public KafkaProducerConnectionFactory(IKafkaConfiguration configuration) 
+        public KafkaProducerConnectionFactory(IKafkaConfiguration configuration)
         {
             _configuration = configuration;
         }
