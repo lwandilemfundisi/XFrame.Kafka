@@ -2,7 +2,7 @@ using XFrame.Resilience;
 
 namespace XFrame.Kafka.Resiliencies;
 
-public sealed class KafkaResilientStrategy : IKafkaResilientStrategy
+public class KafkaResilientStrategy : IKafkaResilientStrategy
 {
     private const int MaximumRetryCount = 3;
 

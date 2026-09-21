@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using XFrame.Kafka.Configurations;
 using XFrame.Kafka.Messages;
 using XFrame.Kafka.Resiliencies;
+using XFrame.Resilience;
 
 namespace XFrame.Kafka.Extensions;
 
@@ -14,6 +15,7 @@ public static class KafkaExtensions
         services.AddSingleton(_ => configure());
         services.AddSingleton<IKafkaMessageFactory, KafkaMessageFactory>();
         services.AddSingleton<IKafkaResilientStrategy, KafkaResilientStrategy>();
+        services.AddSingleton<ITransientFaultHandler<IKafkaResilientStrategy>, TransientFaultHandler<KafkaResilientStrategy>>();
         return services;
     }
 }
