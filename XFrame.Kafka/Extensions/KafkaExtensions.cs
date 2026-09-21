@@ -15,7 +15,7 @@ public static class KafkaExtensions
         services.AddSingleton(_ => configure());
         services.AddSingleton<IKafkaMessageFactory, KafkaMessageFactory>();
         services.AddSingleton<IKafkaResilientStrategy, KafkaResilientStrategy>();
-        services.AddSingleton<ITransientFaultHandler<IKafkaResilientStrategy>, TransientFaultHandler<KafkaResilientStrategy>>();
+        services.AddSingleton<ITransientFaultHandler<IKafkaResilientStrategy>, TransientFaultHandler<IKafkaResilientStrategy>>();
         return services;
     }
 }

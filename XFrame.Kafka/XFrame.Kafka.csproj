@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
 		<PackageId>XFrame.Kafka</PackageId>
-		<Version>10.0.1</Version>
+		<Version>10.0.2</Version>
 		<Authors>Lwandile Mfundisi</Authors>
 		<Description>Kafka integration primitives for .NET applications.</Description>
 		<IsPackable>true</IsPackable>
